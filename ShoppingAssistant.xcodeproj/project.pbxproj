@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76AA9BF8234E6C7700F1C83E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA9BF7234E6C7700F1C83E /* Utils.swift */; };
+		76AA9C02234E73CC00F1C83E /* ShoppingAssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA9C01234E73CC00F1C83E /* ShoppingAssistantTests.swift */; };
 		76F9122223453C30000600B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F9122123453C30000600B9 /* AppDelegate.swift */; };
 		76F9122423453C30000600B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F9122323453C30000600B9 /* ViewController.swift */; };
 		76F9122723453C30000600B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F9122523453C30000600B9 /* Main.storyboard */; };
@@ -14,7 +16,21 @@
 		76F9122C23453C30000600B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F9122A23453C30000600B9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		76AA9C04234E73CC00F1C83E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76F9121623453C30000600B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76F9121D23453C30000600B9;
+			remoteInfo = ShoppingAssistant;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		76AA9BF7234E6C7700F1C83E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		76AA9BFF234E73CC00F1C83E /* ShoppingAssistantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingAssistantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76AA9C01234E73CC00F1C83E /* ShoppingAssistantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingAssistantTests.swift; sourceTree = "<group>"; };
+		76AA9C03234E73CC00F1C83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76F9121E23453C30000600B9 /* ShoppingAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F9122123453C30000600B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76F9122323453C30000600B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +41,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		76AA9BFC234E73CC00F1C83E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76F9121B23453C30000600B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +58,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76AA9C00234E73CC00F1C83E /* ShoppingAssistantTests */ = {
+			isa = PBXGroup;
+			children = (
+				76AA9C01234E73CC00F1C83E /* ShoppingAssistantTests.swift */,
+				76AA9C03234E73CC00F1C83E /* Info.plist */,
+			);
+			path = ShoppingAssistantTests;
+			sourceTree = "<group>";
+		};
 		76F9121523453C30000600B9 = {
 			isa = PBXGroup;
 			children = (
 				76F9122023453C30000600B9 /* ShoppingAssistant */,
+				76AA9C00234E73CC00F1C83E /* ShoppingAssistantTests */,
 				76F9121F23453C30000600B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				76F9121E23453C30000600B9 /* ShoppingAssistant.app */,
+				76AA9BFF234E73CC00F1C83E /* ShoppingAssistantTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +94,7 @@
 				76F9122823453C30000600B9 /* Assets.xcassets */,
 				76F9122A23453C30000600B9 /* LaunchScreen.storyboard */,
 				76F9122D23453C30000600B9 /* Info.plist */,
+				76AA9BF7234E6C7700F1C83E /* Utils.swift */,
 			);
 			path = ShoppingAssistant;
 			sourceTree = "<group>";
@@ -67,6 +102,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		76AA9BFE234E73CC00F1C83E /* ShoppingAssistantTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76AA9C06234E73CC00F1C83E /* Build configuration list for PBXNativeTarget "ShoppingAssistantTests" */;
+			buildPhases = (
+				76AA9BFB234E73CC00F1C83E /* Sources */,
+				76AA9BFC234E73CC00F1C83E /* Frameworks */,
+				76AA9BFD234E73CC00F1C83E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76AA9C05234E73CC00F1C83E /* PBXTargetDependency */,
+			);
+			name = ShoppingAssistantTests;
+			productName = ShoppingAssistantTests;
+			productReference = 76AA9BFF234E73CC00F1C83E /* ShoppingAssistantTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		76F9121D23453C30000600B9 /* ShoppingAssistant */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76F9123023453C30000600B9 /* Build configuration list for PBXNativeTarget "ShoppingAssistant" */;
@@ -94,6 +147,10 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Gaman Rares-Constantin";
 				TargetAttributes = {
+					76AA9BFE234E73CC00F1C83E = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 76F9121D23453C30000600B9;
+					};
 					76F9121D23453C30000600B9 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -113,11 +170,19 @@
 			projectRoot = "";
 			targets = (
 				76F9121D23453C30000600B9 /* ShoppingAssistant */,
+				76AA9BFE234E73CC00F1C83E /* ShoppingAssistantTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		76AA9BFD234E73CC00F1C83E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76F9121C23453C30000600B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,16 +196,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		76AA9BFB234E73CC00F1C83E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76AA9C02234E73CC00F1C83E /* ShoppingAssistantTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76F9121A23453C30000600B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				76F9122423453C30000600B9 /* ViewController.swift in Sources */,
 				76F9122223453C30000600B9 /* AppDelegate.swift in Sources */,
+				76AA9BF8234E6C7700F1C83E /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76AA9C05234E73CC00F1C83E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76F9121D23453C30000600B9 /* ShoppingAssistant */;
+			targetProxy = 76AA9C04234E73CC00F1C83E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		76F9122523453C30000600B9 /* Main.storyboard */ = {
@@ -162,6 +244,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		76AA9C07234E73CC00F1C83E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72HU5945Q4;
+				INFOPLIST_FILE = ShoppingAssistantTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MSA.ShoppingAssistantTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShoppingAssistant.app/ShoppingAssistant";
+			};
+			name = Debug;
+		};
+		76AA9C08234E73CC00F1C83E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 72HU5945Q4;
+				INFOPLIST_FILE = ShoppingAssistantTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MSA.ShoppingAssistantTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShoppingAssistant.app/ShoppingAssistant";
+			};
+			name = Release;
+		};
 		76F9122E23453C30000600B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -317,6 +439,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		76AA9C06234E73CC00F1C83E /* Build configuration list for PBXNativeTarget "ShoppingAssistantTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76AA9C07234E73CC00F1C83E /* Debug */,
+				76AA9C08234E73CC00F1C83E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		76F9121923453C30000600B9 /* Build configuration list for PBXProject "ShoppingAssistant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
