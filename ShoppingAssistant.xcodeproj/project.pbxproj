@@ -10,6 +10,7 @@
 		760A7E512358BB4C00AF60FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760A7E502358BB4C00AF60FB /* User.swift */; };
 		760A7E532358C33A00AF60FB /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760A7E522358C33A00AF60FB /* Offer.swift */; };
 		760A7E552358C3B600AF60FB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760A7E542358C3B600AF60FB /* Product.swift */; };
+		76175FAD2374B7BD00FD8DE1 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175FAC2374B7BD00FD8DE1 /* SignUpController.swift */; };
 		762DFF3A2360EF3E00BA0233 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762DFF392360EF3E00BA0233 /* Role.swift */; };
 		764E03B0236B254100855691 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764E03AF236B254100855691 /* HomeController.swift */; };
 		76AA9BF8234E6C7700F1C83E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA9BF7234E6C7700F1C83E /* Utils.swift */; };
@@ -36,6 +37,7 @@
 		760A7E502358BB4C00AF60FB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		760A7E522358C33A00AF60FB /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		760A7E542358C3B600AF60FB /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		76175FAC2374B7BD00FD8DE1 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		762DFF392360EF3E00BA0233 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		764E03AF236B254100855691 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		76AA9BF7234E6C7700F1C83E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				76F9122D23453C30000600B9 /* Info.plist */,
 				764E03AF236B254100855691 /* HomeController.swift */,
 				76AB3A7C236B4D2800408C8D /* HighPerformanceButCostlyDatabase.swift */,
+				76175FAC2374B7BD00FD8DE1 /* SignUpController.swift */,
 			);
 			path = ShoppingAssistant;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				76F9122423453C30000600B9 /* ViewController.swift in Sources */,
 				76F9122223453C30000600B9 /* AppDelegate.swift in Sources */,
 				764E03B0236B254100855691 /* HomeController.swift in Sources */,
+				76175FAD2374B7BD00FD8DE1 /* SignUpController.swift in Sources */,
 				76AA9BF8234E6C7700F1C83E /* Utils.swift in Sources */,
 				76AB3A7D236B4D2800408C8D /* HighPerformanceButCostlyDatabase.swift in Sources */,
 				760A7E532358C33A00AF60FB /* Offer.swift in Sources */,
