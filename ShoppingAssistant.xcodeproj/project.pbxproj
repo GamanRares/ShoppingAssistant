@@ -13,11 +13,12 @@
 		76175FAD2374B7BD00FD8DE1 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76175FAC2374B7BD00FD8DE1 /* SignUpController.swift */; };
 		762DFF3A2360EF3E00BA0233 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762DFF392360EF3E00BA0233 /* Role.swift */; };
 		764E03B0236B254100855691 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764E03AF236B254100855691 /* HomeController.swift */; };
+		7670C45D237BFBAB004B8730 /* UserDefaults.helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7670C45C237BFBAB004B8730 /* UserDefaults.helpers.swift */; };
 		76AA9BF8234E6C7700F1C83E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA9BF7234E6C7700F1C83E /* Utils.swift */; };
 		76AA9C02234E73CC00F1C83E /* ShoppingAssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA9C01234E73CC00F1C83E /* ShoppingAssistantTests.swift */; };
 		76AB3A7D236B4D2800408C8D /* HighPerformanceButCostlyDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AB3A7C236B4D2800408C8D /* HighPerformanceButCostlyDatabase.swift */; };
 		76F9122223453C30000600B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F9122123453C30000600B9 /* AppDelegate.swift */; };
-		76F9122423453C30000600B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F9122323453C30000600B9 /* ViewController.swift */; };
+		76F9122423453C30000600B9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F9122323453C30000600B9 /* LoginController.swift */; };
 		76F9122723453C30000600B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F9122523453C30000600B9 /* Main.storyboard */; };
 		76F9122923453C30000600B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76F9122823453C30000600B9 /* Assets.xcassets */; };
 		76F9122C23453C30000600B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76F9122A23453C30000600B9 /* LaunchScreen.storyboard */; };
@@ -40,6 +41,7 @@
 		76175FAC2374B7BD00FD8DE1 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		762DFF392360EF3E00BA0233 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		764E03AF236B254100855691 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		7670C45C237BFBAB004B8730 /* UserDefaults.helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.helpers.swift; sourceTree = "<group>"; };
 		76AA9BF7234E6C7700F1C83E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		76AA9BFF234E73CC00F1C83E /* ShoppingAssistantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingAssistantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76AA9C01234E73CC00F1C83E /* ShoppingAssistantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingAssistantTests.swift; sourceTree = "<group>"; };
@@ -47,7 +49,7 @@
 		76AB3A7C236B4D2800408C8D /* HighPerformanceButCostlyDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighPerformanceButCostlyDatabase.swift; sourceTree = "<group>"; };
 		76F9121E23453C30000600B9 /* ShoppingAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76F9122123453C30000600B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		76F9122323453C30000600B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76F9122323453C30000600B9 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		76F9122623453C30000600B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76F9122823453C30000600B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76F9122B23453C30000600B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				76AA9BF7234E6C7700F1C83E /* Utils.swift */,
+				7670C45C237BFBAB004B8730 /* UserDefaults.helpers.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -124,7 +127,7 @@
 				76D6CC34236CD767006D077A /* Utils */,
 				76D6CC33236CD72E006D077A /* Entity */,
 				76F9122123453C30000600B9 /* AppDelegate.swift */,
-				76F9122323453C30000600B9 /* ViewController.swift */,
+				76F9122323453C30000600B9 /* LoginController.swift */,
 				76F9122523453C30000600B9 /* Main.storyboard */,
 				76F9122823453C30000600B9 /* Assets.xcassets */,
 				76F9122A23453C30000600B9 /* LaunchScreen.storyboard */,
@@ -247,10 +250,11 @@
 			files = (
 				760A7E512358BB4C00AF60FB /* User.swift in Sources */,
 				762DFF3A2360EF3E00BA0233 /* Role.swift in Sources */,
-				76F9122423453C30000600B9 /* ViewController.swift in Sources */,
+				76F9122423453C30000600B9 /* LoginController.swift in Sources */,
 				76F9122223453C30000600B9 /* AppDelegate.swift in Sources */,
 				764E03B0236B254100855691 /* HomeController.swift in Sources */,
 				76175FAD2374B7BD00FD8DE1 /* SignUpController.swift in Sources */,
+				7670C45D237BFBAB004B8730 /* UserDefaults.helpers.swift in Sources */,
 				76AA9BF8234E6C7700F1C83E /* Utils.swift in Sources */,
 				76AB3A7D236B4D2800408C8D /* HighPerformanceButCostlyDatabase.swift in Sources */,
 				760A7E532358C33A00AF60FB /* Offer.swift in Sources */,

@@ -26,12 +26,10 @@ class User: Hashable {
     }
     
     static func == (lhs: User, rhs: User) -> Bool {
-        return lhs.fullName == rhs.fullName &&
-                lhs.email == rhs.email
+        return lhs.email == rhs.email
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(fullName)
         hasher.combine(email)
     }
     

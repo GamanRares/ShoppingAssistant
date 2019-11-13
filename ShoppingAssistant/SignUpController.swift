@@ -23,46 +23,23 @@ class SignUpController: UIViewController {
     @IBOutlet weak var validateConfirmPasswordLabel: UILabel!
     
     @IBAction func save(_ sender: Any) {
-        guard let firstName = firstNameField.text, !firstNameField.text!.isEmpty else {
-            validateFirstNameLabel.text = "User must have a First Name"
-            validateFirstNameLabel.isHidden = false
+        
+        guard self.validateFields() != false else {
             return
         }
-        validateFirstNameLabel.isHidden = true
-        guard let lastName = lastNameField.text, !lastNameField.text!.isEmpty else {
-            validateLastNameLabel.text = "User must have a Last Name"
-            validateLastNameLabel.isHidden = false
-            return
-        }
-        validateLastNameLabel.isHidden = true
-        guard let email = emailField.text, !emailField.text!.isEmpty else {
-            validateEmailLabel.text = "User must have an email address"
+        
+        let firstName = firstNameField.text!
+        let lastName = lastNameField.text!
+        let email = emailField.text!
+        let password = passwordField.text!
+        
+        let user:User = User(fullName: firstName + " " + lastName, password: Utils().sha256(stringToEncrypt: password), email: email, role: Role.REGULAR_USER)
+        
+        guard HighPerformanceButCostlyDatabase.users.contains(user) != true else {
+            validateEmailLabel.text = "Email adress already used"
             validateEmailLabel.isHidden = false
             return
         }
-        guard let password = passwordField.text, !passwordField.text!.isEmpty else {
-            validatePasswordLabel.text = "User must have a Password"
-            validatePasswordLabel.isHidden = false
-            return
-        }
-        validatePasswordLabel.isHidden = true
-        guard let confirmPassword = confirmPasswordField.text, !confirmPasswordField.text!.isEmpty else {
-            validateConfirmPasswordLabel.text = "User must have a First Name"
-            validateConfirmPasswordLabel.isHidden = false
-            return
-        }
-        validateConfirmPasswordLabel.isHidden = true
-        
-        if password != confirmPassword {
-            validatePasswordLabel.text = "Passwords doesn't match"
-            validateConfirmPasswordLabel.text = "Passwords doesn't match"
-            validatePasswordLabel.isHidden = false
-            validateConfirmPasswordLabel.isHidden = false
-            return
-        }
-        
-        let utils = Utils()
-        let user:User = User(fullName: firstName + " " + lastName, password: utils.sha256(stringToEncrypt: password), email: email, role: Role.REGULAR_USER)
         
         HighPerformanceButCostlyDatabase.users.insert(user)
         
@@ -78,7 +55,54 @@ class SignUpController: UIViewController {
         validateEmailLabel.isHidden = true
         validatePasswordLabel.isHidden = true
         validateConfirmPasswordLabel.isHidden = true
+        passwordField.isSecureTextEntry = true
+        confirmPasswordField.isSecureTextEntry = true
     
+    }
+    
+    private func validateFields() -> Bool {
+        guard !firstNameField.text!.isEmpty else {
+            validateFirstNameLabel.text = "User must have a First Name"
+            validateFirstNameLabel.isHidden = false
+            return false
+        }
+        validateFirstNameLabel.isHidden = true
+        guard !lastNameField.text!.isEmpty else {
+            validateLastNameLabel.text = "User must have a Last Name"
+            validateLastNameLabel.isHidden = false
+            return false
+        }
+        validateLastNameLabel.isHidden = true
+        
+        let regex = "^[a-zA-Z0-9]+@[^@]*$"
+        
+        guard !emailField.text!.isEmpty, emailField.text!.range(of: regex, options: .regularExpression) != nil else {
+            validateEmailLabel.text = "Invalid email adress"
+            validateEmailLabel.isHidden = false
+            return false
+        }
+        guard !passwordField.text!.isEmpty else {
+            validatePasswordLabel.text = "User must have a Password"
+            validatePasswordLabel.isHidden = false
+            return false
+        }
+        validatePasswordLabel.isHidden = true
+        guard !confirmPasswordField.text!.isEmpty else {
+            validateConfirmPasswordLabel.text = "User must have a First Name"
+            validateConfirmPasswordLabel.isHidden = false
+            return false
+        }
+        validateConfirmPasswordLabel.isHidden = true
+        
+        if passwordField.text! != confirmPasswordField.text! {
+            validatePasswordLabel.text = "Passwords doesn't match"
+            validateConfirmPasswordLabel.text = "Passwords doesn't match"
+            validatePasswordLabel.isHidden = false
+            validateConfirmPasswordLabel.isHidden = false
+            return false
+        }
+        
+        return true
     }
     
 }
