@@ -11,7 +11,7 @@ import Foundation
 extension UserDefaults {
     
     enum UserDefaultsKeys: String {
-        case isLoggedIn = "true"
+        case isLoggedIn
     }
     
     func setIsLoggedIn(value: Bool) {

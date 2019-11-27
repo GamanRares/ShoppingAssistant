@@ -71,14 +71,23 @@
                                     <action selector="SignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ePd-fc-rS3"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVV-kY-63h">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Shopping Assistant" id="Ypx-2F-kAO"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kTm-nD-M0S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3ar-BL-OKX"/>
+                            <constraint firstItem="kVV-kY-63h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5la-kw-rvL"/>
                             <constraint firstItem="kTm-nD-M0S" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6lM-q0-A5k"/>
                             <constraint firstItem="aBU-DH-8ma" firstAttribute="leading" secondItem="1SB-XF-Qpw" secondAttribute="trailing" constant="22" id="XIu-7X-CTv"/>
                             <constraint firstItem="1SB-XF-Qpw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-38" id="aCg-fT-c4S"/>
                             <constraint firstItem="aBU-DH-8ma" firstAttribute="bottom" secondItem="1SB-XF-Qpw" secondAttribute="bottom" id="ngh-Rx-kdS"/>
+                            <constraint firstItem="kVV-kY-63h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pNV-gw-Xej"/>
+                            <constraint firstItem="kVV-kY-63h" firstAttribute="centerX" secondItem="kTm-nD-M0S" secondAttribute="centerX" id="r8l-BU-SyL"/>
                             <constraint firstItem="1SB-XF-Qpw" firstAttribute="top" secondItem="kTm-nD-M0S" secondAttribute="bottom" constant="50" id="v1P-df-Hb3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -94,7 +103,7 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
         </scene>
-        <!--Home Controller-->
+        <!--Title-->
         <scene sceneID="gOp-Q3-Lfu">
             <objects>
                 <viewController storyboardIdentifier="HomeView" id="92P-Ln-BwM" customClass="HomeController" customModule="ShoppingAssistant" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,14 +117,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jY7-O5-Iji">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Shopping Assistant" id="XfM-XO-eud">
+                                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="YMf-OD-2AO">
+                                            <connections>
+                                                <action selector="SignOut:" destination="92P-Ln-BwM" id="uKB-fv-8lC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Vwr-tu-AvQ" firstAttribute="centerY" secondItem="N40-p9-r0L" secondAttribute="centerY" id="15e-AQ-bVv"/>
                             <constraint firstItem="Vwr-tu-AvQ" firstAttribute="centerX" secondItem="N40-p9-r0L" secondAttribute="centerX" id="EDd-HL-qkD"/>
+                            <constraint firstItem="jY7-O5-Iji" firstAttribute="top" secondItem="7g1-OX-eTj" secondAttribute="top" id="R84-mC-Fb6"/>
+                            <constraint firstItem="jY7-O5-Iji" firstAttribute="centerX" secondItem="Vwr-tu-AvQ" secondAttribute="centerX" id="e3O-Fa-r53"/>
+                            <constraint firstItem="jY7-O5-Iji" firstAttribute="leading" secondItem="N40-p9-r0L" secondAttribute="leading" id="rsg-Fz-any"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7g1-OX-eTj"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="xHB-Wb-JqX">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="lcF-zJ-q0h"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="SignOutSegue1" id="9sf-wz-OlS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jX-cN-j57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,11 +237,35 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLe-6N-3rP">
+                                <rect key="frame" x="0.0" y="45" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Sign Up" id="k6G-67-D9K">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="back" landscapeImage="back" largeContentSizeImage="back" style="done" id="rTo-Eg-rSS">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="0T2-ve-dW6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4c-aY-YWq">
+                                <rect key="frame" x="45" y="56" width="38" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LoI-xU-gmg" firstAttribute="centerY" secondItem="YyW-sz-DhI" secondAttribute="centerY" id="0xp-1x-gR2"/>
+                            <constraint firstItem="K4c-aY-YWq" firstAttribute="leading" secondItem="d1a-Gg-jbe" secondAttribute="leading" constant="45" id="6x5-CM-F6a"/>
+                            <constraint firstItem="K4c-aY-YWq" firstAttribute="centerY" secondItem="jLe-6N-3rP" secondAttribute="centerY" id="J8B-LZ-Vss"/>
+                            <constraint firstItem="jLe-6N-3rP" firstAttribute="top" secondItem="d1a-Gg-jbe" secondAttribute="top" constant="1" id="WOJ-Yp-kmt"/>
                             <constraint firstItem="LoI-xU-gmg" firstAttribute="centerX" secondItem="YyW-sz-DhI" secondAttribute="centerX" id="hgb-Ux-uK7"/>
+                            <constraint firstItem="K4c-aY-YWq" firstAttribute="top" secondItem="d1a-Gg-jbe" secondAttribute="top" constant="12" id="m7L-dp-NTA"/>
+                            <constraint firstItem="jLe-6N-3rP" firstAttribute="centerX" secondItem="LoI-xU-gmg" secondAttribute="centerX" id="ngr-Vt-rFv"/>
+                            <constraint firstItem="jLe-6N-3rP" firstAttribute="leading" secondItem="YyW-sz-DhI" secondAttribute="leading" id="pUg-NM-cu2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d1a-Gg-jbe"/>
                     </view>
@@ -234,7 +288,10 @@
             <point key="canvasLocation" x="1083" y="464"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="24" height="24"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UOa-nh-MYN"/>
+        <segue reference="9sf-wz-OlS"/>
     </inferredMetricsTieBreakers>
 </document>

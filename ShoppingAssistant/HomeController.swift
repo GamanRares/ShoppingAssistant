@@ -10,6 +10,12 @@ import UIKit
 
 class HomeController: UIViewController {
     
+    @IBAction func SignOut(_ sender: Any) {
+        UserDefaults.standard.setIsLoggedIn(value: false)
+        performSegue(withIdentifier: "SignOutSegue1", sender: self)
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
