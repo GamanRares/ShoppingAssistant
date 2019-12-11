@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  UserInfoController.swift
 //  ShoppingAssistant
 //
 //  Created by Gaman Rares-Constantin on 11/28/19.
@@ -8,7 +8,12 @@
 
 import UIKit
 
-class HomeController: UITableViewController {
+class UserInfoController: UIViewController {
+
+    @IBAction func SignOut(_ sender: Any) {
+        UserDefaults.standard.setIsLoggedIn(value: false)
+        performSegue(withIdentifier: "SignOutFromInfo", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,4 +21,3 @@ class HomeController: UITableViewController {
     }
     
 }
-

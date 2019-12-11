@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginController: LoginController = mainStoryboard.instantiateViewController(withIdentifier: "LoginView") as! LoginController
-        let homeController: HomeController = mainStoryboard.instantiateViewController(withIdentifier: "HomeView") as! HomeController
+        let userInfoController: UserInfoController = mainStoryboard.instantiateViewController(withIdentifier: "UserInfoView") as! UserInfoController
         
         if UserDefaults.standard.isLoggedIn() {
-            self.window?.rootViewController = homeController
+            self.window?.rootViewController = userInfoController
         } else {
             self.window?.rootViewController = loginController
         }
