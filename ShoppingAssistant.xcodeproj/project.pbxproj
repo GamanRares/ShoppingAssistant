@@ -76,6 +76,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		762904E723C2414F001F7F7B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		76AA9C00234E73CC00F1C83E /* ShoppingAssistantTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +133,7 @@
 		76F9122023453C30000600B9 /* ShoppingAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				762904E723C2414F001F7F7B /* Controllers */,
 				76D6CC34236CD767006D077A /* Utils */,
 				76D6CC33236CD72E006D077A /* Entity */,
 				76F9122123453C30000600B9 /* AppDelegate.swift */,

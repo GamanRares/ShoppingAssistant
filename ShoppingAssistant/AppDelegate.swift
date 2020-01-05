@@ -13,16 +13,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginController: LoginController = mainStoryboard.instantiateViewController(withIdentifier: "LoginView") as! LoginController
         let userInfoController: UserInfoController = mainStoryboard.instantiateViewController(withIdentifier: "UserInfoView") as! UserInfoController
+        loginController.modalPresentationStyle = .fullScreen
+        userInfoController.modalPresentationStyle = .fullScreen
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [userInfoController]
         
         if UserDefaults.standard.isLoggedIn() {
-            self.window?.rootViewController = userInfoController
+            self.window?.rootViewController = tabBarController
         } else {
             self.window?.rootViewController = loginController
         }
