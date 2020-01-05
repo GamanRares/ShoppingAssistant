@@ -19,11 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginController: LoginController = mainStoryboard.instantiateViewController(withIdentifier: "LoginView") as! LoginController
         let userInfoController: UserInfoController = mainStoryboard.instantiateViewController(withIdentifier: "UserInfoView") as! UserInfoController
+        let productListNavigationController: ProductListNavigationController = mainStoryboard.instantiateViewController(withIdentifier: "ProductListNavigationView") as! ProductListNavigationController
         loginController.modalPresentationStyle = .fullScreen
         userInfoController.modalPresentationStyle = .fullScreen
+        productListNavigationController.modalPresentationStyle = .fullScreen
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [userInfoController]
+        tabBarController.viewControllers = [productListNavigationController, userInfoController]
         
         if UserDefaults.standard.isLoggedIn() {
             self.window?.rootViewController = tabBarController

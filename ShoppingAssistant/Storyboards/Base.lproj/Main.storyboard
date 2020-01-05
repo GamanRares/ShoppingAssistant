@@ -233,7 +233,7 @@
         <!--Shopping Assistant-->
         <scene sceneID="mgX-md-9zS">
             <objects>
-                <tableViewController id="umS-sz-GFd" customClass="ProductListController" sceneMemberID="viewController">
+                <tableViewController id="umS-sz-GFd" customClass="ProductListController" customModule="ShoppingAssistant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mdt-VU-Us5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,12 +260,13 @@
                                 <rect key="frame" x="334" y="7" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOut:" destination="umS-sz-GFd" eventType="touchUpInside" id="VPj-0U-fLE"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="SignOutFromProductList" modalPresentationStyle="fullScreen" id="JHs-z3-xEh"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="SignOutFromProducts" modalPresentationStyle="fullScreen" id="4Aj-Wg-uaS"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1W-qf-AOS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -297,8 +298,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Third view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQk-bq-B6z">
-                                <rect key="frame" x="168" y="438" width="79" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User info view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQk-bq-B6z">
+                                <rect key="frame" x="168" y="438" width="108" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -317,10 +318,10 @@
             </objects>
             <point key="canvasLocation" x="2696" y="92"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Home Controller-->
         <scene sceneID="4Vg-3S-eN5">
             <objects>
-                <tabBarController id="dYC-1h-hz5" sceneMemberID="viewController">
+                <tabBarController id="dYC-1h-hz5" customClass="HomeController" customModule="ShoppingAssistant" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GKT-0q-fGn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -338,7 +339,7 @@
         <!--Item-->
         <scene sceneID="eId-gW-VAR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BuM-gM-x2k" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProductListNavigationView" automaticallyAdjustsScrollViewInsets="NO" id="BuM-gM-x2k" customClass="ProductListNavigationController" customModule="ShoppingAssistant" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="zlE-iK-IUp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sVU-Km-Ogu">
@@ -359,6 +360,7 @@
         <image name="back" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Aj-Wg-uaS"/>
+        <segue reference="Qun-U9-XFj"/>
+        <segue reference="JHs-z3-xEh"/>
     </inferredMetricsTieBreakers>
 </document>
