@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
+        initDatabase()
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let loginController: LoginController = mainStoryboard.instantiateViewController(withIdentifier: "LoginView") as! LoginController
         let userInfoController: UserInfoController = mainStoryboard.instantiateViewController(withIdentifier: "UserInfoView") as! UserInfoController
@@ -58,6 +59,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    private func initDatabase() {
+        HighPerformanceButCostlyDatabase.users.insert(User(fullName: "test", password: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08", email: "test@yahoo.com", role: Role.ADMINISTRATOR))
+        let macBookPro = Product(name: "MacBook Pro 16'", image: #imageLiteral(resourceName: "macbookPro16'"), description: "test")
+        HighPerformanceButCostlyDatabase.products.insert(macBookPro)
+        HighPerformanceButCostlyDatabase.products.insert(Product(name: "iPad Pro 12.9'", image: #imageLiteral(resourceName: "iPadPro"), description: "test"))
+        HighPerformanceButCostlyDatabase.products.insert(Product(name: "iPhone 11 Pro Max", image: #imageLiteral(resourceName: "iPhone11ProMax"), description: "test"))
+        let offer = Offer(user:  HighPerformanceButCostlyDatabase.users.first!, price: 2799.00)
+        HighPerformanceButCostlyDatabase.offers.insert(offer)
+        macBookPro.addOffer(offer: offer)
     }
 
 

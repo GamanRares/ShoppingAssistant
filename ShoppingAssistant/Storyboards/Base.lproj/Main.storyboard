@@ -234,18 +234,51 @@
         <scene sceneID="mgX-md-9zS">
             <objects>
                 <tableViewController id="umS-sz-GFd" customClass="ProductListController" customModule="ShoppingAssistant" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mdt-VU-Us5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mdt-VU-Us5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qvH-hc-n2j">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductTableViewCell" rowHeight="90" id="qvH-hc-n2j" customClass="ProductTableViewCell" customModule="ShoppingAssistant" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qvH-hc-n2j" id="OEX-Vd-EZp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="macbookPro16'" translatesAutoresizingMaskIntoConstraints="NO" id="KWM-zs-Z5r">
+                                            <rect key="frame" x="0.0" y="0.0" width="127" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-zC-ar9">
+                                            <rect key="frame" x="135" y="11" width="259" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of offers :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfs-nl-em3">
+                                            <rect key="frame" x="135" y="58" width="140" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nr of offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mJ-fE-YqQ">
+                                            <rect key="frame" x="283" y="58" width="88" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="ProductTableViewCell"/>
+                                <connections>
+                                    <outlet property="nrOfOffers" destination="7mJ-fE-YqQ" id="1Pt-LP-uKd"/>
+                                    <outlet property="productImage" destination="KWM-zs-Z5r" id="0vv-Xn-wIY"/>
+                                    <outlet property="productName" destination="ahm-zC-ar9" id="O24-JH-Tjh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -270,9 +303,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1W-qf-AOS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3639" y="-656"/>
+            <point key="canvasLocation" x="3637.68115942029" y="-656.25"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="QAq-RO-uS7">
             <objects>
                 <viewController storyboardIdentifier="UserInfoView" id="hhK-Ie-5o9" customClass="UserInfoController" customModule="ShoppingAssistant" customModuleProvider="target" sceneMemberID="viewController">
@@ -309,7 +342,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="d7F-2L-yUp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="QnF-nt-z99"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="QnF-nt-z99"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="SignOutFromInfo" modalPresentationStyle="fullScreen" id="R37-8h-uFS"/>
                     </connections>
@@ -336,11 +369,11 @@
             </objects>
             <point key="canvasLocation" x="1767" y="-244"/>
         </scene>
-        <!--Item-->
+        <!--Products-->
         <scene sceneID="eId-gW-VAR">
             <objects>
                 <navigationController storyboardIdentifier="ProductListNavigationView" automaticallyAdjustsScrollViewInsets="NO" id="BuM-gM-x2k" customClass="ProductListNavigationController" customModule="ShoppingAssistant" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zlE-iK-IUp"/>
+                    <tabBarItem key="tabBarItem" title="Products" id="zlE-iK-IUp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sVU-Km-Ogu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -358,9 +391,9 @@
     </scenes>
     <resources>
         <image name="back" width="24" height="24"/>
+        <image name="macbookPro16'" width="904" height="840"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qun-U9-XFj"/>
-        <segue reference="JHs-z3-xEh"/>
+        <segue reference="R37-8h-uFS"/>
     </inferredMetricsTieBreakers>
 </document>
